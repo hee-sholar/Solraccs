@@ -43,8 +43,7 @@ export function NFT() {
 
             {/* Description */}
             <p className="text-white/70 text-lg leading-relaxed max-w-2xl">
-              Solraccs NFTs provide exclusive access and benefits within the ecosystem. Holders gain premium features,
-              governance rights, and early access to new products.
+              Raccoons are survivors, hustlers, and natural-born meme lords. Just like them, SolRaccs thrives in the chaos — mixing NFT culture with meme token energy. On Solana's lightning-fast chain, we bring you Solraccs NFT: A limited 3,333 NFT collection.
             </p>
 
             {/* Utilities */}
