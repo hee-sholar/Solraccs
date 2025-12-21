@@ -70,9 +70,9 @@ export function About() {
             <p className="text-sm text-red-400 font-semibold uppercase mb-2">About Us</p>
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">Welcome to Raccs</h3>
             <p className="text-white/70 leading-relaxed mb-6">
-              Solraccs is a fun AI-native ecosystem engineered to redefine how users interact with the Solana blockchain. While we embrace the energy of Web3, we are built on a foundation of serious technology. By merging high-speed AI analytics with optimized DeFi tools, Solraccs provides a smarter, faster gateway for both elite traders and newcomers. Our mission is simple: to make onchain interaction fun and seamless.
+              SolRaccs is a <span className="text-red-400 font-semibold">fun AI-native ecosystem</span> engineered to <span className="text-yellow-400 font-semibold">redefine how users interact with the Solana blockchain</span>. While we embrace the energy of Web3, we are built on a foundation of <span className="text-red-400 font-semibold">serious technology</span>. By merging <span className="text-yellow-400 font-semibold">high-speed AI analytics</span> with <span className="text-red-400 font-semibold">optimized DeFi tools</span>, SolRaccs provides a <span className="text-white font-bold">smarter, faster gateway</span> for both elite traders and newcomers. Our mission is simple: to make <span className="text-red-500 font-bold">onchain interaction fun and seamless</span> while delivering <span className="text-yellow-400 font-bold">cutting-edge performance</span>.
             </p>
-            <button className="px-6 py-3 rounded-full border border-red-400 text-red-400 hover:bg-red-500 hover:text-white transition font-semibold">
+            <button className="cursor-pointer px-6 py-3 rounded-full border border-red-400 text-red-400 hover:bg-red-500 hover:text-white transition font-semibold">
               Learn more
             </button>
           </motion.div>
