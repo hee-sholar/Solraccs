@@ -3,69 +3,54 @@
 import { Twitter, MessageCircle } from "lucide-react";
 import { FaDiscord } from "react-icons/fa";
 
-export function Footer() {
+export default function Footer() {
   return (
-    <footer className="text-gray-300 py-12 px-4">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+    <footer className="relative  border-t border-white/10 text-white">
+      <div className="max-w-7xl mx-auto px-6 py-16 grid gap-10 md:grid-cols-3">
 
-        {/* Logo and Disclaimer */}
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-6">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <img
-              src="/solraccs.jpg"
-              alt="Solraccs Logo"
-              width={40}
-              height={40}
-              className="object-contain"
-            />
-          </div>
-
-          {/* Disclaimer */}
-          <div className="text-center md:text-left max-w-md">
-            <p className="text-sm text-gray-400 leading-relaxed">
-              Solraccs is an experimental Web3 project. Features are in beta and subject to change. This is not financial advice. Only interact with what you understand.
-            </p>
-          </div>
+        {/* Brand */}
+        <div>
+          <h3 className="text-xl font-semibold text-white">Solraccs</h3>
+          <p className="mt-3 text-white/60 text-sm leading-relaxed">
+            AI-powered tools for smarter trading, analytics, and decentralized finance on Solana.
+          </p>
         </div>
 
-        {/* Social links */}
-        <div className="flex items-center gap-4">
-          <a
-            href="https://x.com/Solraccs"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 bg-gray-800 rounded-full hover:bg-blue-600 transition-colors"
-          >
-            <Twitter className="w-5 h-5 text-white" />
-          </a>
+        {/* Links */}
+        <div className="space-y-2 text-sm">
+          <h4 className="font-semibold text-white mb-3">Resources</h4>
+          {["About", "Products", "Token", "NFT", "Roadmap"].map(link => (
+            <a
+              key={link}
+              href={`#${link.toLowerCase()}`}
+              className="block text-white/60 hover:text-red-400 transition"
+            >
+              {link}
+            </a>
+          ))}
+        </div>
+
+        {/* Community */}
+        <div>
+          <h4 className="font-semibold text-white mb-3">Community</h4>
+          <p className="text-white/60 text-sm mb-4">
+            Join our community and stay updated with announcements.
+          </p>
 
           <a
-            href="https://t.me/Solraccs"
+            href="http://t.me/Raccsonsol"
             target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 bg-gray-800 rounded-full hover:bg-blue-500 transition-colors"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500 hover:bg-red-600 transition text-sm font-medium"
           >
-            <MessageCircle className="w-5 h-5 text-white" />
-          </a>
-
-          <a
-            href="https://discord.gg/your-discord-link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 bg-gray-800 rounded-full hover:bg-indigo-600 transition-colors"
-          >
-            <FaDiscord className="w-5 h-5 text-white" />
+            Join Telegram
           </a>
         </div>
+
       </div>
 
-      {/* Divider */}
-      <div className="border-t border-gray-800 mt-8 pt-6 text-center text-gray-500 text-sm">
-        &copy; {new Date().getFullYear()} Solraccs. All rights reserved.
+      <div className="border-t border-white/10 py-6 text-center text-xs text-white/50">
+        © {new Date().getFullYear()} Solraccs. All rights reserved.
       </div>
     </footer>
-  );
+  )
 }
-
-export default Footer;
