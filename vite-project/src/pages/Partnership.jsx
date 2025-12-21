@@ -6,9 +6,7 @@ import { Globe, Handshake } from "lucide-react";
 export function Partnership() {
   const containerVariants = {
     hidden: {},
-    visible: {
-      transition: { staggerChildren: 0.2 },
-    },
+    visible: { transition: { staggerChildren: 0.2 } },
   };
 
   const itemVariants = {
@@ -26,7 +24,7 @@ export function Partnership() {
 
   return (
     <section className="relative py-24 px-4 text-white" id="partnership">
-      <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
+      <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-start gap-12">
         {/* Text Content */}
         <div className="flex-1">
           {/* Section Header */}
@@ -52,7 +50,9 @@ export function Partnership() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
           >
-            <h3 className="text-2xl font-bold mb-6 text-center md:text-left">How to Partner With Us</h3>
+            <h3 className="text-2xl font-bold mb-6 text-center md:text-left">
+              How to Partner With Us
+            </h3>
             <div className="grid sm:grid-cols-2 gap-6">
               {[
                 { title: 'Strategic Collaboration', description: 'Work with us on joint projects that benefit both communities.' },
@@ -101,7 +101,7 @@ export function Partnership() {
 
         {/* Image Section */}
         <motion.div
-          className="flex-1 flex flex-col items-center relative"
+          className="flex-1 flex flex-col items-center relative mt-60"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -115,9 +115,9 @@ export function Partnership() {
           />
 
           {/* Four Small Partner Logos with Names */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full mt-4">
+          <div className="flex justify-between w-full mt-4">
             {smallPartnerImages.map((partner, i) => (
-              <div key={i} className="relative flex flex-col items-center">
+              <div key={i} className="flex flex-col items-center w-1/4 relative">
                 {/* Glowing blurred background */}
                 <div className="absolute w-full h-full rounded-lg blur-[40px] bg-red-500/30 -z-10 animate-pulseSlow" />
 
