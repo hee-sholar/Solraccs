@@ -37,7 +37,7 @@ export function About() {
             About Solraccs
           </h2>
           <p className="text-lg text-white/70 max-w-3xl mx-auto leading-relaxed">
-            Solraccs is a fun AI-native ecosystem engineered to redefine how users interact with the Solana blockchain. While we embrace the energy of Web3, we are built on a foundation of serious technology. By merging high-speed AI analytics with optimized DeFi tools, Solraccs provides a smarter, faster gateway for both elite traders and newcomers. Our mission is simple: to make onchain interaction fun and seamless.
+            Solraccs is an AI-powered Web3 ecosystem built on Solana. We combine advanced crypto analytics, AI-assisted trading, and NFTs to create smarter, faster, and more accessible crypto tools.
           </p>
         </motion.div>
 
@@ -70,7 +70,7 @@ export function About() {
             <p className="text-sm text-red-400 font-semibold uppercase mb-2">About Us</p>
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">Welcome to Raccs</h3>
             <p className="text-white/70 leading-relaxed mb-6">
-              Raccoons are survivors, hustlers, and natural-born meme lords. Just like them, <span className="text-red-400 font-semibold">SolRaccs</span> thrives in the chaos — mixing <span className="text-yellow-400 font-semibold">NFT culture</span> with meme token energy. On Solana's lightning-fast chain, we bring you: <span className="text-red-400 font-semibold">A limited 3,333 NFT collection</span>, <span className="text-yellow-400 font-semibold">Ameme-powered community token ($RACC)</span>, utilities, staking, and future play-to-earn mechanics. This isn't just another meme coin — this is a <span className="text-red-500 font-bold">trash mob revolution</span>.
+              Solraccs is a fun AI-native ecosystem engineered to redefine how users interact with the Solana blockchain. While we embrace the energy of Web3, we are built on a foundation of serious technology. By merging high-speed AI analytics with optimized DeFi tools, Solraccs provides a smarter, faster gateway for both elite traders and newcomers. Our mission is simple: to make onchain interaction fun and seamless.
             </p>
             <button className="px-6 py-3 rounded-full border border-red-400 text-red-400 hover:bg-red-500 hover:text-white transition font-semibold">
               Learn more
