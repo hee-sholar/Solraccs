@@ -1,129 +1,132 @@
-'use client';
+'use client'
 
-import { CheckCircle2, Circle, Rocket, Cpu, Users, Star } from "lucide-react";
-import { motion, useAnimation, useInView } from "framer-motion";
-import { useRef, useEffect } from "react";
+import { CheckCircle2, Rocket, Cpu, Users, Star } from "lucide-react"
+import { motion, useAnimation, useInView } from "framer-motion"
+import { useRef, useEffect } from "react"
 
 export function Roadmap() {
   const phases = [
     {
-      phase: "Phase 1",
       title: "Foundation",
       icon: Rocket,
       items: ["Branding", "Beta website launch", "Community building"],
     },
     {
-      phase: "Phase 2",
       title: "Product Launch",
       icon: Cpu,
       items: ["RACCS AI MVP", "Solraccs NFT launch", "Early token utility"],
     },
     {
-      phase: "Phase 3",
       title: "Ecosystem Expansion",
       icon: Users,
       items: ["Raccs Swap launch", "Staking & rewards", "Deeper token integrations"],
     },
     {
-      phase: "Phase 4",
       title: "Full Platform",
       icon: Star,
       items: ["Full AI dashboard", "Advanced analytics", "Ecosystem expansion"],
     },
-  ];
+  ]
 
-  const controls = useAnimation();
-  const ref = useRef(null);
-  const inView = useInView(ref, { margin: "-50px" });
+  const controls = useAnimation()
+  const ref = useRef(null)
+  const inView = useInView(ref, { margin: "-100px" })
 
   useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-  }, [controls, inView]);
+    if (inView) controls.start("visible")
+  }, [controls, inView])
 
   return (
-    <section className="relative py-24 px-4 bg-red-gradient" id="roadmap">
+    <section className="relative py-20 px-4" id="roadmap">
       <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
+
+        {/* Header */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-14"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-red-400 via-white to-red-500 bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-red-400 via-white to-red-500 bg-clip-text text-transparent">
             Roadmap
           </h2>
-          <p className="text-lg text-white/70 leading-relaxed">
-            Step by step journey to building the future of AI-powered crypto tools
+          <p className="text-white/70 max-w-xl mx-auto text-sm sm:text-base">
+            Step-by-step journey to building the future of AI-powered crypto tools
           </p>
         </motion.div>
 
-        {/* Timeline Container */}
-        <div
-          className="relative flex flex-col md:flex-row items-start md:items-center md:justify-between space-y-12 md:space-y-0 md:space-x-8"
-          ref={ref}
-        >
-          {/* Horizontal connector line for desktop */}
+        {/* Timeline */}
+        <div ref={ref} className="relative">
+
+          {/* Vertical line (mobile) */}
+          <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-white/10 md:hidden" />
+
+          {/* Horizontal line (desktop) */}
           <motion.div
-            className="hidden md:block absolute top-16 left-6 right-6 h-1 bg-white/20 z-0"
+            className="hidden md:block absolute top-20 left-6 right-6 h-px bg-white/15"
             initial={{ scaleX: 0 }}
             animate={controls}
             variants={{
-              visible: { scaleX: 1, transition: { duration: 1.5, ease: "easeInOut" } },
+              visible: { scaleX: 1, transition: { duration: 1.4, ease: "easeInOut" } },
             }}
             style={{ transformOrigin: "left" }}
           />
 
-          {phases.map((phase, index) => {
-            const Icon = phase.icon;
-            return (
-              <motion.div
-                key={index}
-                className="relative z-10 flex flex-col items-center text-center md:w-1/4"
-                initial="hidden"
-                animate={controls}
-                variants={{
-                  hidden: { opacity: 0, y: 50 },
-                  visible: { opacity: 1, y: 0, transition: { delay: index * 0.5, duration: 0.6 } },
-                }}
-              >
-                {/* Phase Icon */}
-                <div className="w-16 h-16 rounded-full flex items-center justify-center mb-4 bg-red-500 glow-effect">
-                  <Icon className="w-8 h-8 text-white" />
-                </div>
+          <div className="flex flex-col md:flex-row gap-16 md:gap-8 justify-between">
+            {phases.map((phase, index) => {
+              const Icon = phase.icon
+              return (
+                <motion.div
+                  key={index}
+                  className="relative flex flex-col items-center text-center md:w-1/4"
+                  initial={{ opacity: 0, y: 40 }}
+                  animate={controls}
+                  variants={{
+                    visible: {
+                      opacity: 1,
+                      y: 0,
+                      transition: { delay: index * 0.35, duration: 0.6 },
+                    },
+                  }}
+                >
+                  {/* Icon */}
+                  <div className="relative z-10 w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-4 bg-red-500 shadow-lg shadow-red-500/30">
+                    <Icon className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
+                  </div>
 
-                {/* Phase Title */}
-                <div className="mb-4">
-                  <div className="text-sm font-mono mb-1 text-white/70">{`Phase ${index + 1}`}</div>
-                  <h3 className="text-lg font-bold text-white">{phase.title}</h3>
-                </div>
+                  {/* Phase */}
+                  <span className="text-xs tracking-widest text-white/50 mb-1">
+                    PHASE {index + 1}
+                  </span>
+                  <h3 className="text-lg sm:text-xl font-semibold mb-3">
+                    {phase.title}
+                  </h3>
 
-                {/* Milestones */}
-                <ul className="space-y-2">
-                  {phase.items.map((item, itemIndex) => (
-                    <motion.li
-                      key={itemIndex}
-                      className="flex items-center gap-2 text-white/70 text-sm"
-                      initial={{ opacity: 0, x: -10 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.2 * itemIndex, duration: 0.4 }}
-                      viewport={{ once: true }}
-                    >
-                      <CheckCircle2 className="w-4 h-4 text-white/70 shrink-0" />
-                      <span>{item}</span>
-                    </motion.li>
-                  ))}
-                </ul>
-              </motion.div>
-            );
-          })}
+                  {/* Items */}
+                  <ul className="space-y-2 text-sm text-white/70">
+                    {phase.items.map((item, i) => (
+                      <motion.li
+                        key={i}
+                        className="flex items-center justify-center gap-2"
+                        initial={{ opacity: 0, x: -8 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ delay: i * 0.15 }}
+                        viewport={{ once: true }}
+                      >
+                        <CheckCircle2 className="w-4 h-4 text-red-400" />
+                        <span>{item}</span>
+                      </motion.li>
+                    ))}
+                  </ul>
+                </motion.div>
+              )
+            })}
+          </div>
         </div>
       </div>
     </section>
-  );
+  )
 }
 
-export default Roadmap;
+export default Roadmap
