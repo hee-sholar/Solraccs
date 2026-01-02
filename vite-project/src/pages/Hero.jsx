@@ -94,7 +94,7 @@ export default function Hero() {
           </div>
 
           <div className="flex items-center gap-3">
-            <button className="hidden md:flex items-center gap-2 px-4 py-2 text-sm rounded-full bg-gradient-to-r from-red-500 via-red-600 to-red-500 hover:opacity-90 transition">
+            <button className="hidden md:flex items-center gap-2 px-4 py-2 text-sm rounded-full bg-gradient-to-r from-red-500 via-red-600 to-red-500 hover:opacity-90 transition cursor-pointer">
               <Wallet size={16} /> Connect Wallet
             </button>
             <button className="md:hidden" onClick={() => setOpen(!open)}>
@@ -109,7 +109,7 @@ export default function Hero() {
             {navLinks.map((link) => (
               <a key={link} href={`#${link.toLowerCase()}`} className="block text-white/80 hover:text-white">{link}</a>
             ))}
-            <button className="w-full flex items-center justify-center gap-2 mt-2 px-4 py-2 rounded-full bg-red-500 hover:bg-red-600">
+            <button className="w-full flex items-center justify-center gap-2 mt-2 px-4 py-2 rounded-full bg-red-500 hover:bg-red-600 cursor-pointer">
               <Wallet size={16} /> Connect Wallet
             </button>
           </div>
