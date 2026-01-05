@@ -31,7 +31,7 @@ export function AiSwap() {
       text: `Hey! 👋 I'm your AI DEX assistant. 
 Tell me what you want to swap!
 
-Try: "Swap 1 ETH to USDC" or "Buy 100 USDT worth of LINK"`,
+Try: "Swap 1 SOL to USDC" or "Buy 100 USDT worth of LINK"`,
     },
   ]);
 
@@ -58,7 +58,6 @@ Try: "Swap 1 ETH to USDC" or "Buy 100 USDT worth of LINK"`,
 
     /* simulate AI scanning delay */
     setTimeout(() => {
-      // Fake analyzed values (replace with real API if needed)
       const preview = {
         dex: "Uniswap V3",
         fromToken: "CEDRA",
@@ -152,7 +151,7 @@ Try: "Swap 1 ETH to USDC" or "Buy 100 USDT worth of LINK"`,
                 value={message}
                 disabled={loading}
                 onChange={(e) => setMessage(e.target.value)}
-                placeholder='Try "Swap 1 ETH to USDC" or "Buy $1000 of LINK"'
+                placeholder='Try "Swap 1 SOL to USDC" or "Buy $1000 of LINK"'
                 className={`flex-1 border rounded-xl px-4 py-3 text-sm focus:outline-none ${
                   loading ? "bg-gray-100 cursor-not-allowed" : "focus:ring-2 focus:ring-red-400"
                 }`}
@@ -278,13 +277,13 @@ function SwapPreviewCard({ data }) {
 
 /* ================= STAKE PAGE ================= */
 const TOKENS = [
-  { id: "ETH", name: "Ethereum", price: 3200, apy: 8.47, protocol: "Lido Finance" },
+  { id: "SOL", name: "Solana", price: 3200, apy: 8.47, protocol: "Lido Finance" },
   { id: "USDC", name: "USD Coin", price: 1.0, apy: 5.2, protocol: "Aave" },
   { id: "MATIC", name: "Polygon", price: 0.78, apy: 6.1, protocol: "Curve" },
 ];
 
 const ACTIVE_STAKES = [
-  { token: "ETH", amount: 2.5, apy: 8.47, earned: 127.5, protocol: "Lido" },
+  { token: "SOL", amount: 2.5, apy: 8.47, earned: 127.5, protocol: "Lido" },
   { token: "USDC", amount: 5000, apy: 5.2, earned: 260, protocol: "Aave" },
 ];
 
@@ -335,7 +334,9 @@ export function AiStakePage() {
 
           <div className="bg-slate-800 rounded-xl p-3">
             <p className="text-xs text-white/60">Est. Yearly Earnings</p>
-            <h2 className="text-2xl font-bold">{estYearly} {token.id}</h2>
+            <h2 className="text-2xl font-bold">
+              {estYearly} {token.id}
+            </h2>
           </div>
         </div>
 
@@ -363,9 +364,9 @@ export function AiStakePage() {
 
 /* ================= HISTORY PAGE ================= */
 const HISTORY = [
-  { icon: <PiggyBank />, type: "stake", status: "Success", text: "Staked 2.5 ETH via Lido", value: "$3,800", time: "2 hours ago" },
+  { icon: <PiggyBank />, type: "stake", status: "Success", text: "Staked 2.5 SOL via Lido", value: "$3,800", time: "2 hours ago" },
   { icon: <TrendingUp />, type: "earn", status: "Success", text: "Earned Rewards", value: "$127.50", time: "Yesterday" },
-  { icon: <ArrowRightLeft />, type: "swap", status: "Pending", text: "Swapped 1 ETH → USDC", value: "$3,200", time: "Processing..." },
+  { icon: <ArrowRightLeft />, type: "swap", status: "Pending", text: "Swapped 1 SOL → USDC", value: "$3,200", time: "Processing..." },
 ];
 
 function StatusBadge({ status }) {
@@ -421,7 +422,7 @@ function SidebarPanel() {
         <h4 className="font-semibold mb-3">⚡ Quick Swaps</h4>
         <QuickSwap label="CEDRA → USDC" />
         <QuickSwap label="USDT → CEDRA" />
-        <QuickSwap label="WBTC → ETH" />
+        <QuickSwap label="WBTC → SOL" />
       </div>
 
       <div className="bg-sky-50 rounded-2xl p-5 border">
