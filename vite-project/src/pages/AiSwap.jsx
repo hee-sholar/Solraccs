@@ -83,7 +83,7 @@ Try: "Swap 1 SOL to USDC" or "Buy 100 USDT worth of LINK"`,
   return (
     <div className="w-full max-w-6xl mt-14 grid grid-cols-1 lg:grid-cols-3 gap-6">
       {/* ================= LEFT PANEL ================= */}
-      <div className="lg:col-span-2 bg-white rounded-2xl border shadow-sm">
+      <div className="lg:col-span-2 rounded-2xl border shadow-sm">
         {/* Tabs */}
         <div className="flex items-center gap-2 p-3 border-b">
           <TabButton active={activeTab === "swap"} onClick={() => setActiveTab("swap")}>
@@ -100,7 +100,7 @@ Try: "Swap 1 SOL to USDC" or "Buy 100 USDT worth of LINK"`,
         </div>
 
         {/* Header */}
-        <div className="px-6 py-4 bg-sky-50 border-b rounded-t-2xl">
+        <div className="px-6 py-4  border-b rounded-t-2xl">
           <h3 className="font-semibold text-red-400">
             {activeTab === "swap" && "AI Swap Assistant"}
             {activeTab === "stake" && "AI-Optimized Staking"}
@@ -127,10 +127,10 @@ Try: "Swap 1 SOL to USDC" or "Buy 100 USDT worth of LINK"`,
 
         {/* ================= LOCKED STATE BUTTON ================= */}
         {!launched && (
-          <div className="border rounded-2xl p-5 bg-gradient-to-br from-sky-50 to-white shadow-sm mb-5">
+          <div className="border rounded-2xl p-5 bg-gradient-to-br shadow-sm mb-5">
             <h2 className="text-lg font-semibold mb-2">Launch AI Trading 🚀</h2>
 
-            <p className="text-gray-600 mb-3">
+            <p className="text-gray-200 mb-3">
               Click launch to enable AI-powered swap assistant.
             </p>
 
@@ -160,7 +160,7 @@ Try: "Swap 1 SOL to USDC" or "Buy 100 USDT worth of LINK"`,
               <button
                 onClick={handleSend}
                 disabled={loading}
-                className="bg-red-500 hover:bg-red-600 disabled:bg-gray-400 text-white px-4 py-3 rounded-xl cursor-pointer"
+                className="bg-red-500 hover:bg-red-600 disabled:bg-gray-400 px-4 py-3 rounded-xl cursor-pointer"
               >
                 {loading ? (
                   <span className="animate-spin border-2 border-white border-t-transparent rounded-full w-4 h-4 inline-block" />
@@ -189,7 +189,7 @@ function TabButton({ active, children, onClick }) {
     <button
       onClick={onClick}
       className={`px-4 py-2 rounded-xl text-sm font-medium transition ${
-        active ? "bg-red-500 text-white" : "bg-gray-100 text-gray-500"
+        active ? "bg-red-500 text-white" : " text-gray-500"
       }`}
     >
       {children}
@@ -202,7 +202,7 @@ function AiSwapChat({ chat, loading, launched, swapPreview }) {
   return (
     <div className="space-y-3 max-h-[240px] overflow-y-auto">
       {!launched && (
-        <div className="bg-yellow-50 border border-yellow-200 p-4 rounded-xl text-sm">
+        <div className="border border-yellow-200 p-4 rounded-xl text-sm">
           🔐 Swap chat is locked — click <b>Launch AI Trading</b> to enable.
         </div>
       )}
@@ -211,7 +211,7 @@ function AiSwapChat({ chat, loading, launched, swapPreview }) {
         <div
           key={i}
           className={`px-4 py-3 rounded-xl text-sm shadow-sm border max-w-xl transition-all duration-300 ${
-            msg.from === "ai" ? "bg-sky-50 border-sky-200" : "bg-gray-100 border-gray-300 ml-auto"
+            msg.from === "ai" ? "border-sky-200" : "border-gray-300 ml-auto"
           }`}
         >
           {msg.text}
@@ -219,7 +219,7 @@ function AiSwapChat({ chat, loading, launched, swapPreview }) {
       ))}
 
       {loading && (
-        <div className="px-4 py-3 rounded-xl text-sm shadow-sm border max-w-xs bg-sky-50 border-sky-200 animate-pulse">
+        <div className="px-4 py-3 rounded-xl text-sm shadow-sm border max-w-xs border-sky-200 animate-pulse">
           🤖 AI is calculating best route…
         </div>
       )}
@@ -234,28 +234,28 @@ function SwapPreviewCard({ data }) {
   return (
     <div
       id="swap-card"
-      className="border rounded-2xl p-4 shadow-sm bg-white animate-[slide-up_0.3s_ease] max-w-sm"
+      className="border rounded-2xl p-4 shadow-sm animate-[slide-up_0.3s_ease] max-w-sm"
     >
       <p className="text-sm font-medium">
         Found best route via <span className="text-sky-600">{data.dex}</span> 🚀
       </p>
 
-      <div className="mt-3 bg-sky-50 border border-sky-200 rounded-xl p-4">
+      <div className="mt-3 border border-sky-200 rounded-xl p-4">
         <div className="flex justify-between text-xs text-gray-500 mb-1">
           <span>Swap Route</span>
           <span className="text-green-600 font-semibold">Best Price ✓</span>
         </div>
 
         <div className="grid grid-cols-2 gap-3 mt-1">
-          <div className="bg-white rounded-xl border p-3">
-            <p className="text-xs text-gray-500">From</p>
+          <div className=" rounded-xl border p-3">
+            <p className="text-xs text-gray-300">From</p>
             <h3 className="font-semibold text-lg">
               {data.fromAmount} {data.fromToken}
             </h3>
           </div>
 
-          <div className="bg-white rounded-xl border p-3">
-            <p className="text-xs text-gray-500">To</p>
+          <div className="rounded-xl border p-3">
+            <p className="text-xs text-gray-300">To</p>
             <h3 className="font-semibold text-lg">
               {data.toAmount} {data.toToken}
             </h3>
@@ -386,7 +386,7 @@ function StatusBadge({ status }) {
 
 function AiHistoryPage() {
   return (
-    <div className="bg-white rounded-2xl p-5 border shadow-sm">
+    <div className="rounded-2xl p-5 border shadow-sm">
       <h3 className="font-semibold mb-3">Recent Activity</h3>
 
       <div className="space-y-3 text-sm">
@@ -425,9 +425,9 @@ function SidebarPanel() {
         <QuickSwap label="WBTC → SOL" />
       </div>
 
-      <div className="bg-sky-50 rounded-2xl p-5 border">
+      <div className=" rounded-2xl p-5 border">
         <h4 className="font-semibold text-sky-600 mb-3">AI Advantage</h4>
-        <ul className="text-sm text-gray-600 space-y-2">
+        <ul className="text-sm text-gray-200 space-y-2">
           <li>✓ Scans 10+ DEXs for best rates</li>
           <li>✓ MEV protection built-in</li>
           <li>✓ Gas optimization included</li>
