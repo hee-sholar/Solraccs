@@ -26,7 +26,7 @@ export function Products() {
       },
     },
     {
-      name: "Connect Wallet",
+      name: "RACCS SWAP",
       status: "LIVE",
       icon: Wallet,
       description:
