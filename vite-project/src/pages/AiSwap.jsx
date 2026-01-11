@@ -59,7 +59,7 @@ Try: "Swap 1 SOL to USDC" or "Buy 100 USDT worth of LINK"`,
     /* simulate AI scanning delay */
     setTimeout(() => {
       const preview = {
-        dex: "Uniswap V3",
+        dex: "Raydium",
         fromToken: "CEDRA",
         fromAmount: "1.0",
         toToken: "USDC",
