@@ -18,7 +18,7 @@ export default function Footer() {
         <div>
           <div className="flex items-center gap-3">
             <img
-              src="/solraccs.jpg"
+              src="/sol.jpg"
               alt="Solraccs Logo"
               className="w-14 h-14 rounded-full border border-white/10"
             />

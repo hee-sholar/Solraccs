@@ -35,7 +35,7 @@ export default function Navbar() {
         >
           {/* Logo */}
           <a href="#" className="flex items-center gap-2 font-semibold text-lg">
-            <img src="/solraccs.jpg" alt="Solraccs Logo" className="h-10 w-10 rounded-full" />
+            <img src="/sol.jpg" alt="Solraccs Logo" className="h-10 w-10 rounded-full" />
             Solraccs
           </a>
 
