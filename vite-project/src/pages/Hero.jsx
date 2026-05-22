@@ -83,7 +83,7 @@ export default function Hero() {
           className="flex items-center justify-between rounded-full border border-white/10 bg-white/5 backdrop-blur px-4 sm:px-5 py-3"
         >
           <a href="#" className="flex items-center gap-2 font-semibold text-lg">
-            <img src="/solraccs.jpg" alt="Solraccs Logo" className="h-10 w-10 rounded-full" />
+            <img src="/sol.jpg" alt="Solraccs Logo" className="h-10 w-10 rounded-full" />
             Solraccs
           </a>
 
