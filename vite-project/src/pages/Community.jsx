@@ -101,7 +101,7 @@ export function Community() {
           </a>
 
           <a
-            href="http://t.me/Raccsonsol"
+            href="https://t.me/solraccschannel"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 px-7 py-3 rounded-3xl bg-card/50 backdrop-blur-sm border border-border text-foreground font-semibold shadow-md hover:bg-card/70 hover:scale-105 transition-all duration-300"

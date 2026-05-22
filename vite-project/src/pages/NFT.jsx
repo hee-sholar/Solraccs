@@ -38,7 +38,7 @@ export function NFT() {
           <div className="flex flex-col items-center text-center space-y-6">
             {/* Icon */}
             <div className="w-24 h-24 rounded-2xl bg-red-500/20 flex items-center justify-center glow-effect">
-              <img src="/NFT5.jpg" className="rounded-2xl text-red-400" />
+              <img src="/sol.jpg" className="rounded-2xl text-red-400" />
             </div>
 
             {/* Description */}

@@ -118,10 +118,10 @@ export default function Hero() {
         {/* HERO SECTION */}
         <div className="relative min-h-[85vh] flex flex-col items-center justify-center text-center mt-12 sm:mt-20">
           {[ 
-            { src: "/NFT1.jpg", pos: "left-2 top-10 sm:left-6 sm:top-24", rot: "-20deg", delay: "" },
-            { src: "/NFT2.jpg", pos: "right-2 top-16 sm:right-6 sm:top-20", rot: "20deg", delay: "delay-200" },
-            { src: "/NFT3.jpg", pos: "left-4 bottom-16 sm:left-10 sm:bottom-32", rot: "15deg", delay: "delay-400" },
-            { src: "/NFT4.jpg", pos: "right-4 bottom-12 sm:right-10 sm:bottom-28", rot: "-15deg", delay: "delay-600" },
+            { src: "/sol.jpg", pos: "left-2 top-10 sm:left-6 sm:top-24", rot: "-20deg", delay: "" },
+            { src: "/sol.jpg", pos: "right-2 top-16 sm:right-6 sm:top-20", rot: "20deg", delay: "delay-200" },
+            { src: "/sol.jpg", pos: "left-4 bottom-16 sm:left-10 sm:bottom-32", rot: "15deg", delay: "delay-400" },
+            { src: "/sol.jpg", pos: "right-4 bottom-12 sm:right-10 sm:bottom-28", rot: "-15deg", delay: "delay-600" },
           ].map((nft, i) => (
             <img key={i} src={nft.src} alt={`NFT ${i + 1}`} className={`absolute w-12 sm:w-16 md:w-24 rounded-xl shadow-xl animate-float ${nft.pos} rotate-[${nft.rot}] ${nft.delay}`} />
           ))}

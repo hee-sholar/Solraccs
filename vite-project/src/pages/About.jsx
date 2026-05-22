@@ -52,7 +52,7 @@ export function About() {
             viewport={{ once: true }}
           >
             <img
-              src="/NFT1.jpg"
+              src="/sol.jpg"
               alt="Raccoon NFT"
               className="rounded-2xl shadow-2xl"
               width={400}
