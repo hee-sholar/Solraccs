@@ -148,7 +148,7 @@ export default function Hero() {
                 Explore Ecosystem
               </button>
 
-              <a href="http://t.me/Raccsonsol" target="_blank">
+              <a href="https://t.me/solraccschannel" target="_blank">
                 <button className="px-7 py-3 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 transition font-semibold flex items-center gap-2">
                   Join Community <ArrowRight size={16} />
                 </button>

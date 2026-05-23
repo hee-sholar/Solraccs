@@ -76,7 +76,7 @@ export default function Footer() {
           </p>
 
           <a
-            href="https://t.me/Raccsonsol"
+            href="https://t.me/solraccschannel"
             target="_blank"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-red-500 to-red-600 hover:opacity-90 transition text-sm font-medium shadow-lg shadow-red-500/20"
           >
